@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>СОЮЗ-МЕТАЛЛИСТ — Главная</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<link rel="stylesheet" href="assets/css/header.css" />
+	<link rel="stylesheet" href="assets/css/footer.css" />
+	<script src="assets/js/script.js" defer></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body class="page">
+	<!-- Header -->
+	<div id="header-placeholder"></div>
+
+	<main class="main">
+		<section class="hero" id="hero">
+			<div class="hero__bg" role="img" aria-label="МЕТАЛЛОПРОКАТ"></div>
+			<div class="container hero__content">
+				<h1 class="hero__title">МЕТАЛЛОПРОКАТ<br />ПОД ЛЮБЫЕ ЗАДАЧИ</h1>
+				<div class="hero__actions">
+					<a href="#catalog" class="button button--primary hero__button">
+						<span class="button__icon"></span>
+						В КАТАЛОГ
+					</a>
+				</div>
+				<div class="hero__teaser-container">
+					<div class="hero__teaser-controls">
+						<button class="hero__teaser-btn" aria-label="Предыдущий слайд" data-direction="prev"></button>
+						<button class="hero__teaser-btn" aria-label="Следующий слайд" data-direction="next"></button>
+					</div>
+					<div class="hero__teaser">
+										<div class="hero__teaser-slide active" data-slide="0">
+					<h2 class="hero__subtitle">НОВЫЙ ЦВЕТ ПРОФ ЛИСТА RAL 7777 УЖЕ В КАТАЛОГЕ!</h2>
+					<p class="hero__text">Равным образом, семантический разбор внешних противодействий играет важную роль в формировании существующих финансовых...</p>
+				</div>
+						<div class="hero__teaser-slide" data-slide="1">
+							<h2 class="hero__subtitle">ПРЕМИУМ КАЧЕСТВО ПО ДОСТУПНОЙ ЦЕНЕ</h2>
+							<p class="hero__text">Наша продукция соответствует всем международным стандартам качества и безопасности, обеспечивая надежность и долговечность.</p>
+						</div>
+						<div class="hero__teaser-slide" data-slide="2">
+							<h2 class="hero__subtitle">БЫСТРАЯ ДОСТАВКА ПО ВСЕЙ РОССИИ</h2>
+							<p class="hero__text">Собственная логистическая служба гарантирует своевременную доставку вашего заказа в любую точку страны.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section--with-title" id="catalog">
+			<div class="container">
+				<div class="section-title">
+					<span class="section-title__bar"></span>
+					<h2 class="section-title__text">КАТАЛОГ ПРОДУКЦИИ</h2>
+				</div>
+				<div class="catalog-grid">
+					<a href="#" class="card card--catalog">
+						<div class="card__body">
+							<h3 class="card__title">Нержавеющий металл</h3>
+							<div class="card__items">
+								<div class="card__items-column">
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Круг</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Труба</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Лист</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Сетка</span>
+									</div>
+								</div>
+								<div class="card__items-column">
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Проволока</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Лента</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Шестигранник</span>
+									</div>
+								</div>
+							</div>
+							<span class="link-arrow card__link">УЗНАТЬ БОЛЬШЕ</span>
+						</div>
+						<div class="card__media" style="--card-bg:url('assets/img/cat_img.png');"></div>
+					</a>
+					<a href="#" class="card card--catalog">
+						<div class="card__body">
+							<h3 class="card__title">Алюминий</h3>
+							<div class="card__items">
+								<div class="card__items-column">
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Круг</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Труба</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Лист</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Сетка</span>
+									</div>
+								</div>
+								<div class="card__items-column">
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Проволока</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Лента</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Шестигранник</span>
+									</div>
+								</div>
+							</div>
+							<span class="link-arrow card__link">УЗНАТЬ БОЛЬШЕ</span>
+						</div>
+						<div class="card__media" style="--card-bg:url('assets/img/cat_img.png');"></div>
+					</a>
+					<a href="#" class="card card--catalog">
+						<div class="card__body">
+							<h3 class="card__title">ЧЕРНЫЙ МЕТАЛЛ</h3>
+							<div class="card__items">
+								<div class="card__items-column">
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Круг</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Труба</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Лист</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Сетка</span>
+									</div>
+								</div>
+								<div class="card__items-column">
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Проволока</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Лента</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Шестигранник</span>
+									</div>
+								</div>
+							</div>
+							<span class="link-arrow card__link">УЗНАТЬ БОЛЬШЕ</span>
+						</div>
+						<div class="card__media" style="--card-bg:url('assets/img/cat_img.png');"></div>
+					</a>
+					<a href="#" class="card card--catalog">
+						<div class="card__body">
+							<h3 class="card__title">СПЕЦИАЛЬНЫЕ СТАЛИ</h3>
+							<div class="card__items">
+								<div class="card__items-column">
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Круг</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Труба</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Лист</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Сетка</span>
+									</div>
+								</div>
+								<div class="card__items-column">
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Проволока</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Лента</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Шестигранник</span>
+									</div>
+								</div>
+							</div>
+							<span class="link-arrow card__link">УЗНАТЬ БОЛЬШЕ</span>
+						</div>
+						<div class="card__media" style="--card-bg:url('assets/img/cat_img.png');"></div>
+					</a>
+					<a href="#" class="card card--catalog">
+						<div class="card__body">
+							<h3 class="card__title">Цветной металл</h3>
+							<div class="card__items">
+								<div class="card__items-column">
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Круг</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Труба</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Лист</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Сетка</span>
+									</div>
+								</div>
+								<div class="card__items-column">
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Проволока</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Лента</span>
+									</div>
+									<div class="card__item">
+										<div class="card__item-icon"></div>
+										<span class="card__item-text">Шестигранник</span>
+									</div>
+								</div>
+							</div>
+							<span class="link-arrow card__link">УЗНАТЬ БОЛЬШЕ</span>
+						</div>
+						<div class="card__media" style="--card-bg:url('assets/img/cat_img.png');"></div>
+					</a>
+					<a href="#" class="card card--catalog card--accent">
+						<div class="card__body">
+							<h3 class="card__title">ПОЛНЫЙ КАТАЛОГ </br>ПРОДУКЦИИ</h3>
+							<span class="link-arrow card__link">ПЕРЕЙТИ</span>
+						</div>
+						<div class="card__media" style="--card-bg:url('assets/img/cat_img.png');"></div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section--about" id="about">
+			<div class="container">
+				<div class="section-title">
+					<span class="section-title__bar"></span>
+					<h2 class="section-title__text">О НАС</h2>
+				</div>
+			</div>
+			<div class="container about">
+				<div class="about__text">
+					<p>ООО «СОЮЗ-МЕТАЛЛИСТ» – компания в сфере снабжения металлопрокатом. Мы ценим Ваше доверие и стремимся к долговременному сотрудничеству, строго соблюдая все взятые на себя обязательства. Высокое качество, ответственность и профессионализм – основа нашей работы. А так же обширная база, собственные водители в каждом крупном городе, позволяют нам предлагать выгодные условия для сотрудничества.</p>
+					<p>Работая с нами Вы будете уверены в том, что к Вам едет, по какому стандарту, когда приедет и кто привезет. Работаем по 275-ФЗ, с отсрочкой платежа. В наличии широкий номенклатурный ряд с РТ Техприемкой.</p>
+					<a href="about.html" class="button button--primary about__button">
+	<span class="button__icon"></span>
+	ПОДРОБНЕЕ
+</a>
+				</div>
+				<div class="about__media-container">
+					<div class="about__media-controls">
+						<button class="about__media-btn" aria-label="Предыдущий слайд" data-direction="prev"></button>
+						<button class="about__media-btn" aria-label="Следующий слайд" data-direction="next"></button>
+					</div>
+					<div class="about__media" role="img" aria-label="О компании">
+						<div class="about__media-slide active" data-slide="0"></div>
+						<div class="about__media-slide" data-slide="1"></div>
+						<div class="about__media-slide" data-slide="2"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section--map" id="geography">
+			<div class="container geography">
+				<div class="geography__header">
+					<div class="geography__subtitle">
+						<h3 class="geography__subtitle-text">ГЕОГРАФИЯ ПРОЕКТОВ</h3>
+					</div>
+					<div class="geography__title">
+						<div class="geography__title-bar"></div>
+						<h2 class="geography__title-text">РОССИЯ</h2>
+					</div>
+				</div>
+				<div class="geography__map-container">
+					<div class="geography__map" aria-label="Карта проектов">
+						<img src="assets/svg/ru_map.svg" alt="Карта России" class="geography__map-image">
+						
+						<!-- Точки на карте -->
+						<div class="geography__point geography__point--moscow" data-city="Москва" data-description="Главный офис компании и крупнейший склад">
+							<div class="geography__point-outer"></div>
+							<div class="geography__point-inner"></div>
+						</div>
+						
+						<div class="geography__point geography__point--spb" data-city="Санкт-Петербург" data-description="Региональный офис и склад">
+							<div class="geography__point-outer"></div>
+							<div class="geography__point-inner"></div>
+						</div>
+						
+						<div class="geography__point geography__point--ekb" data-city="Екатеринбург" data-description="Уральский региональный склад">
+							<div class="geography__point-outer"></div>
+							<div class="geography__point-inner"></div>
+						</div>
+						
+						<div class="geography__point geography__point--novosibirsk" data-city="Новосибирск" data-description="Сибирский региональный склад">
+							<div class="geography__point-outer"></div>
+							<div class="geography__point-inner"></div>
+						</div>
+						
+						<div class="geography__point geography__point--kazan" data-city="Казань" data-description="Приволжский региональный склад">
+							<div class="geography__point-outer"></div>
+							<div class="geography__point-inner"></div>
+						</div>
+						
+						<div class="geography__point geography__point--rostov" data-city="Ростов-на-Дону" data-description="Южный региональный склад">
+							<div class="geography__point-outer"></div>
+							<div class="geography__point-inner"></div>
+						</div>
+						
+						<div class="geography__point geography__point--vladivostok" data-city="Владивосток" data-description="Дальневосточный региональный склад">
+							<div class="geography__point-outer"></div>
+							<div class="geography__point-inner"></div>
+						</div>
+						
+						<div class="geography__point geography__point--kaliningrad" data-city="Калининград" data-description="Западный региональный склад">
+							<div class="geography__point-outer"></div>
+							<div class="geography__point-inner"></div>
+						</div>
+						
+						<div class="geography__point geography__point--sochi" data-city="Сочи" data-description="Курортный региональный склад">
+							<div class="geography__point-outer"></div>
+							<div class="geography__point-inner"></div>
+						</div>
+						
+						<div class="geography__point geography__point--krasnodar" data-city="Краснодар" data-description="Кубанский региональный склад">
+							<div class="geography__point-outer"></div>
+							<div class="geography__point-inner"></div>
+						</div>
+					</div>
+					
+					<!-- Всплывающее окно -->
+					<div class="geography__tooltip" id="geography-tooltip">
+						<h3 class="geography__tooltip-title"></h3>
+						<p class="geography__tooltip-description"></p>
+					</div>
+				</div>
+				
+				<div class="geography__features">
+					<div class="geography__feature">
+						<div class="geography__feature-bar"></div>
+						<span class="geography__feature-text">БЫСТРАЯ ДОСТАВКА</span>
+					</div>
+					<div class="geography__feature">
+						<div class="geography__feature-bar"></div>
+						<span class="geography__feature-text">КОНТРОЛЬ КАЧЕСТВА</span>
+					</div>
+					<div class="geography__feature">
+						<div class="geography__feature-bar"></div>
+						<span class="geography__feature-text">50 СКЛАДОВ НА ТЕРРИТОРИИ РФ</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section--stats" id="stats">
+			<div class="stats__background">
+				<div class="stats__bg-image"></div>
+				<div class="stats__red-circle"></div>
+			</div>
+			<div class="container stats__container">
+				<div class="stats__vertical-line"></div>
+				<div class="stats__center-image"></div>
+				<div class="stats__content">
+					<div class="stats__item stats__item--main">
+						<div class="stats__caption">ТЫСЯЧ ТОНН<br>МЕТАЛЛА ПРОДАНО</div>
+						<div class="stats__value-wrapper">
+							<div class="stats__red-bar"></div>
+							<div class="stats__value stats__value--xl">753</div>
+							<div class="stats__value-icon">
+								<div class="stats__icon-line"></div>
+								<div class="stats__icon-line"></div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="stats__item">
+						<div class="stats__caption">ОБЩАЯ<br>ПЛОЩАДЬ СКЛАДОВ</div>
+						<div class="stats__value">950м<span style="color: var(--color-red);">²</span></div>
+					</div>
+					<div class="stats__item">
+						<div class="stats__caption">ЛЕТ<br>НА РЫНКЕ</div>
+						<div class="stats__value">20</div>
+					</div>
+					<div class="stats__item">
+						<div class="stats__caption">СОТРУДНИКОВ<br>В ШТАТЕ</div>
+						<div class="stats__value">253</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section--press" id="press">
+			<div class="container">
+				<div class="section-title">
+					<span class="section-title__bar"></span>
+					<h2 class="section-title__text">ПРЕСС ЦЕНТР</h2>
+				</div>
+				<div class="tabs">
+					<div class="tabs__content">
+						<button class="tabs__tab tabs__tab--active" type="button">Новости</button>
+						<button class="tabs__tab" type="button">СМИ о нас</button>
+						<button class="tabs__tab" type="button">События</button>
+					</div>
+					<div class="tabs__controls">
+						<button class="tabs__control-btn" aria-label="Предыдущая новость" data-direction="prev"></button>
+						<button class="tabs__control-btn" aria-label="Следующая новость" data-direction="next"></button>
+					</div>
+				</div>
+				<div class="news-grid-wrapper">
+					<div class="news-grid">
+						<article class="card card--news news-slide" data-slide="0">
+							<a href="#" class="card__link-wrapper">
+								<div class="card__content">
+									<div class="card__header">
+										<h3 class="card__title">Внедрение новой марки стали для производства наших изделий</h3>
+										<span class="card__link">УЗНАТЬ БОЛЬШЕ</span>
+									</div>
+									<div class="card__meta">
+										<div class="card__date"><span class="card__day">05</span><div class="card__date-secondary"><span class="card__month">сен</span><span class="card__year">2025</span></div></div>
+									</div>
+								</div>
+							</a>
+						</article>
+						<article class="card card--news news-slide" data-slide="1">
+							<a href="#" class="card__link-wrapper">
+								<div class="card__content">
+									<div class="card__header">
+										<h3 class="card__title">Профессиональный праздник: День металлурга 2025</h3>
+										<span class="card__link">УЗНАТЬ БОЛЬШЕ</span>
+									</div>
+									<div class="card__meta">
+										<div class="card__date"><span class="card__day">23</span><div class="card__date-secondary"><span class="card__month">сен</span><span class="card__year">2025</span></div></div>
+									</div>
+								</div>
+							</a>
+						</article>
+						<article class="card card--news news-slide" data-slide="2">
+							<a href="#" class="card__link-wrapper">
+								<div class="card__content">
+									<div class="card__header">
+										<h3 class="card__title">Союз-металлист вошел в ТОП-100 производств России</h3>
+										<span class="card__link">УЗНАТЬ БОЛЬШЕ</span>
+									</div>
+									<div class="card__meta">
+										<div class="card__date"><span class="card__day">31</span><div class="card__date-secondary"><span class="card__month">сен</span><span class="card__year">2025</span></div></div>
+									</div>
+								</div>
+							</a>
+						</article>
+						<article class="card card--news news-slide" data-slide="3">
+							<a href="#" class="card__link-wrapper">
+								<div class="card__content">
+									<div class="card__header">
+										<h3 class="card__title">Новые технологии обработки металла в 2025 году</h3>
+										<span class="card__link">УЗНАТЬ БОЛЬШЕ</span>
+									</div>
+									<div class="card__meta">
+										<div class="card__date"><span class="card__day">15</span><div class="card__date-secondary"><span class="card__month">окт</span><span class="card__year">2025</span></div></div>
+									</div>
+								</div>
+							</a>
+						</article>
+						<article class="card card--news news-slide" data-slide="4">
+							<a href="#" class="card__link-wrapper">
+								<div class="card__content">
+									<div class="card__header">
+										<h3 class="card__title">Расширение ассортимента продукции компании</h3>
+										<span class="card__link">УЗНАТЬ БОЛЬШЕ</span>
+									</div>
+									<div class="card__meta">
+										<div class="card__date"><span class="card__day">28</span><div class="card__date-secondary"><span class="card__month">окт</span><span class="card__year">2025</span></div></div>
+									</div>
+								</div>
+							</a>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section--partners" id="partners">
+			<div class="container partners">
+				<div class="section-title">
+					<span class="section-title__bar"></span>
+					<h2 class="section-title__text">НАШИ ПАРТНЕРЫ</h2>
+				</div>
+				<ul class="partners__list">
+					<li class="partners__item"><div class="partners__logo partners__logo--1"></div></li>
+					<li class="partners__item"><div class="partners__logo partners__logo--2"></div></li>
+					<li class="partners__item"><div class="partners__logo partners__logo--3"></div></li>
+					<li class="partners__item"><div class="partners__logo partners__logo--4"></div></li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="section section--contacts" id="contacts">
+			<div class="container">
+				<div class="section-title">
+					<span class="section-title__bar"></span>
+					<h2 class="section-title__text">КОНТАКТЫ</h2>
+				</div>
+			</div>
+			<div class="contacts">
+				<div class="contacts__panel">
+					<div class="contacts__grid container">
+						<div class="contacts__left">
+							<div class="contacts__col">
+								<div class="contacts__item">
+									<div class="contacts__icon contacts__icon--address" aria-hidden="true"></div>
+									<div class="contacts__text">194100, г Санкт-Петербург, Выборгский р-н, ул Александра Матросова, д 4 к 2 литера Е, помещ 1-Н</div>
+								</div>
+								<div class="contacts__item">
+									<div class="contacts__icon contacts__icon--phone" aria-hidden="true"></div>
+									<div class="contacts__text">
+										<div>+7 (921) 390-35-09</div>
+										<div>+7 (921) 094-12-21</div>
+									</div>
+								</div>
+								<div class="contacts__item">
+									<div class="contacts__icon contacts__icon--mail" aria-hidden="true"></div>
+									<div class="contacts__text">s_metallist@mail.ru</div>
+								</div>
+							</div>
+							<div class="contacts__form">
+								<div class="form">
+									<div class="form__title">свяжитесь с нами</div>
+									<form class="form__body" action="#" method="post" onsubmit="return false">
+										<div class="form__row form__row--top">
+											<label class="field">
+												<input class="field__control" type="text" placeholder=" " />
+												<span class="field__placeholder">Ваше имя</span>
+											</label>
+											<label class="field">
+												<textarea class="field__control field__control--area" rows="4" placeholder=" "></textarea>
+												<span class="field__placeholder">Ваш вопрос</span>
+											</label>
+										</div>
+										<div class="form__row form__row--bottom">
+											<label class="field">
+												<input class="field__control" type="email" placeholder=" " />
+												<span class="field__placeholder">E-mail</span>
+											</label>
+											<button class="button button--primary form__submit" type="submit">
+												<span class="button__icon"></span>
+												ОТПРАВИТЬ
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="contacts__map" id="map"></div>
+					</div>
+					<!-- Footer -->
+					<div id="footer-placeholder"></div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Simple no-JS fallbacks; interactive behaviors are out of scope -->
+</body>
+</html>
+
+

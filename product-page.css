@@ -1,0 +1,412 @@
+/* Стили для страницы товара */
+
+/* Основные стили для вариаций товара */
+.product-card__thickness-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.thickness-option {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.thickness-option:hover {
+    border-color: #007cba;
+    background: #f0f8ff;
+    color: #007cba;
+    text-decoration: none;
+}
+
+.thickness-option--active {
+    background: #007cba;
+    color: #fff;
+    border-color: #007cba;
+}
+
+.thickness-option--active:hover {
+    background: #005a87;
+    border-color: #005a87;
+    color: #fff;
+}
+
+/* Стили для секций товара */
+.product-card__section {
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.product-card__section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #333;
+    border-bottom: 2px solid #007cba;
+    padding-bottom: 8px;
+}
+
+.product-card__description {
+    line-height: 1.6;
+    color: #666;
+}
+
+.product-card__characteristics {
+    margin-top: 16px;
+}
+
+.characteristics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.characteristics-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.characteristics-table td:first-child {
+    font-weight: 600;
+    color: #333;
+    width: 40%;
+}
+
+.characteristics-table td:last-child {
+    color: #666;
+}
+
+/* Стили для цены и кнопок */
+.product-card__price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #007cba;
+    margin-bottom: 16px;
+}
+
+.product-card__actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #007cba;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #005a87;
+    transform: translateY(-1px);
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn__icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Стили для сетки товаров */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+}
+
+.product-card__image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-card__image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card__content {
+    padding: 16px;
+}
+
+.product-card__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Стили для преимуществ */
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.advantage-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.advantage-card__icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.advantage-card__icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.advantage-card__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.advantage-card__description {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Стили для услуг */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-card {
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: inherit;
+}
+
+.service-card__content {
+    padding: 20px;
+    flex: 1;
+}
+
+.service-card__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.service-card__link {
+    color: #007cba;
+    font-weight: 600;
+}
+
+.service-card__arrow {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+}
+
+.service-card__image {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.service-card__image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Стили для секции "О компании" */
+.about-section {
+    background: #f8f9fa;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.about-section__description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-top: 16px;
+}
+
+/* Стили для заголовков секций */
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-header__line {
+    width: 60px;
+    height: 3px;
+    background: #007cba;
+    margin: 0 auto 15px;
+}
+
+.section-header__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+/* Стили для хлебных крошек */
+.product-card__breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.product-card__breadcrumb {
+    color: #666;
+    text-decoration: none;
+}
+
+.product-card__breadcrumb:hover {
+    color: #007cba;
+    text-decoration: none;
+}
+
+.product-card__breadcrumb--current {
+    color: #333;
+    font-weight: 600;
+}
+
+.product-card__breadcrumb-separator {
+    color: #999;
+}
+
+/* Стили для основного контейнера */
+.product-card-container {
+    margin-bottom: 30px;
+}
+
+.product-card__content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.product-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .product-card__content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .product-card__thickness-options {
+        gap: 6px;
+    }
+    
+    .thickness-option {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .product-card__section {
+        padding: 16px;
+    }
+    
+    .product-card__price {
+        font-size: 20px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .advantages {
+        grid-template-columns: 1fr;
+    }
+    
+    .services {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card {
+        flex-direction: column;
+    }
+    
+    .service-card__image {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .section-header__title {
+        font-size: 20px;
+    }
+}
