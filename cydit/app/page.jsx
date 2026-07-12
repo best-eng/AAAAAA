@@ -4,10 +4,9 @@ import Problem from "@/components/home/Problem";
 import Brain from "@/components/home/Brain";
 import HowItWorks from "@/components/home/HowItWorks";
 import Features from "@/components/home/Features";
-import Demo from "@/components/home/Demo";
-import MemoryViz from "@/components/home/MemoryViz";
-import WhyCydit from "@/components/home/WhyCydit";
 import Security from "@/components/home/Security";
+import Demo from "@/components/home/Demo";
+import WhyCydit from "@/components/home/WhyCydit";
 import Roadmap from "@/components/home/Roadmap";
 import Pricing from "@/components/home/Pricing";
 import FaqSection from "@/components/home/FaqSection";
@@ -22,10 +21,9 @@ export default function HomePage() {
       <Brain />
       <HowItWorks />
       <Features />
-      <Demo />
-      <MemoryViz />
-      <WhyCydit />
       <Security />
+      <Demo />
+      <WhyCydit />
       <Roadmap />
       <Pricing />
       <FaqSection />

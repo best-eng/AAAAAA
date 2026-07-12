@@ -283,23 +283,27 @@
   font-size: 0.95rem;
 }
 
-/* ================= DEMO ================= */
+/* ================= DEMO (interactive) ================= */
 .demoWrap {
   max-width: 940px;
   margin: 0 auto;
   background: linear-gradient(180deg, rgba(14, 16, 24, 0.7), rgba(11, 13, 21, 0.7));
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
-  padding: 40px;
+  padding: 32px;
 }
 
 .demoGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 22px;
+  gap: 20px;
+  align-items: stretch;
 }
 
 .demoCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -324,40 +328,118 @@
   color: #ff5a76;
 }
 
+.doneDot {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(100, 228, 255, 0.14);
+  color: var(--accent);
+}
+
 .recPulse {
-  animation: recBlink 1.4s ease-in-out infinite;
+  animation: recBlink 1.3s ease-in-out infinite;
 }
 
 @keyframes recBlink {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
+  50% { opacity: 0.4; }
 }
 
 .quote {
-  color: #d7dbe6;
+  color: #eef1f6;
   font-size: 1.05rem;
-  line-height: 1.6;
+  line-height: 1.65;
   font-style: italic;
+  min-height: 3.3em;
+}
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.05em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: var(--accent);
+  animation: caretBlink 0.9s steps(1) infinite;
+}
+
+@keyframes caretBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .wave {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 4px;
-  height: 34px;
+  height: 36px;
   margin-top: 20px;
 }
 
 .wave i {
   width: 4px;
+  height: 22%;
   border-radius: 4px;
   background: var(--primary);
-  animation: waveAnim 1.1s ease-in-out infinite;
+}
+
+.waveActive i {
+  animation: waveAnim 1s ease-in-out infinite;
+}
+
+.waveIdle i {
+  background: rgba(79, 124, 255, 0.28);
+  height: 26%;
 }
 
 @keyframes waveAnim {
-  0%, 100% { height: 20%; opacity: 0.5; }
+  0%, 100% { height: 20%; opacity: 0.55; }
   50% { height: 100%; opacity: 1; }
+}
+
+.demoStatus {
+  margin-top: auto;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.statusLive,
+.statusIdle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.statusLive {
+  color: #ff5a76;
+}
+
+.statusIdle {
+  color: var(--accent);
+}
+
+.statusPip {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.statusLive .statusPip {
+  animation: recBlink 1.1s ease-in-out infinite;
+}
+
+.statusMeta {
+  color: var(--muted-foreground);
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 .intelIcon {
@@ -365,10 +447,11 @@
 }
 
 .demoText {
-  color: var(--muted-foreground);
+  color: #d7dbe6;
   font-size: 0.98rem;
-  line-height: 1.6;
+  line-height: 1.65;
   margin-bottom: 18px;
+  animation: fadeUp 0.5s ease;
 }
 
 .demoList {
@@ -401,59 +484,74 @@
   flex-shrink: 0;
 }
 
-/* ================= MEMORY VIZ ================= */
-.vizPanel {
-  position: relative;
-  max-width: 720px;
-  margin: 0 auto;
-  background: linear-gradient(180deg, rgba(14, 16, 24, 0.85), rgba(11, 13, 21, 0.85));
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-  overflow: hidden;
+.taskIn {
+  animation: fadeUp 0.4s ease both;
 }
 
-.vizPanel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(400px 340px at 50% 45%, rgba(100, 228, 255, 0.12), transparent 70%);
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.vizBadges {
-  position: relative;
-  z-index: 1;
+/* right card "thinking" state */
+.thinking {
   display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 24px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.vizBadge {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-strong);
-  border-radius: 12px;
-  padding: 12px 16px;
-}
-
-.vizBadge span {
-  display: block;
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+.thinkingRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--muted-foreground);
-  margin-bottom: 4px;
+  font-size: 0.95rem;
 }
 
-.vizBadge strong {
-  font-size: 0.98rem;
-  font-weight: 600;
-  color: #fff;
+.thinkingDots {
+  display: inline-flex;
+  gap: 4px;
 }
 
-.vizBadge strong .live {
-  color: var(--accent);
+.thinkingDots i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: dotBounce 1.2s ease-in-out infinite;
+}
+
+.thinkingDots i:nth-child(2) { animation-delay: 0.15s; }
+.thinkingDots i:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes dotBounce {
+  0%, 100% { opacity: 0.3; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-4px); }
+}
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton span {
+  display: block;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.12) 37%,
+    rgba(255, 255, 255, 0.05) 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
 }
 
 /* ================= WHY CYDIT ================= */
