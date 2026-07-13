@@ -1,0 +1,45 @@
+.wrap {
+  position: relative;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 460px;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-top: 18px;
+}
+
+.subtitle {
+  color: var(--muted-foreground);
+  margin-top: 12px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.body {
+  margin-top: 28px;
+  text-align: left;
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 28px 22px;
+  }
+}
